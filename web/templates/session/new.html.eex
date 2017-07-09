@@ -1,0 +1,23 @@
+<main class="pa4">
+  <%= if logged_in?(@conn) do %>
+    <h6>Logged in as <%= current_user(@conn).display_name %></h6>
+    <%= link "Logout", to: session_path(@conn, :delete), method: :delete, class: "br2 bw1 b--black-20 pa2 input-reset ba light-red bg-transparent dim w-100 pointer" %>
+  <% else %>
+    <%= form_for @conn, session_path(@conn, :create), [as: :session, class: "measure center"], fn f -> %>
+      <fieldset class="ba b--transparent ph0 mh0">
+        <legend class="f4 fw6 ph0 mh0 helvetica">SONAR</legend>
+        <div class="mt3">
+          <a class="link dim br2 pa2 dib white bg-dark-blue" href="/auth/facebook">Log in with Facebook</a>
+        </div>
+        <legend class="mt3 fw6 ph0 mh0 helvetica">or</legend>
+        <div class="mt3">
+          <%= text_input f, :email, id: "email-input", placeholder: "Email", class: "br2 bw1 b--black-20 pa2 input-reset ba bg-transparent w-100" %>
+        </div>
+        <div class="mt3">
+          <%= password_input f, :password, id: "password-input", placeholder: "Password", class: "br2 bw1 b--black-20 pa2 input-reset ba bg-transparent w-100" %>
+        </div>
+      </fieldset>
+      <%= submit "Login", class: "br2 bw1 b--black-20 pa2 input-reset ba light-red bg-transparent dim w-100 pointer" %>
+    <% end %>
+  <% end %>
+</main>

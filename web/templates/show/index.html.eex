@@ -1,0 +1,38 @@
+<h2>Listing shows</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Artist</th>
+      <th>Venue</th>
+      <th>Venue lat</th>
+      <th>Venue long</th>
+      <th>Price</th>
+      <th>Utc date</th>
+      <th>Ytid</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for show <- @shows do %>
+    <tr>
+      <td><%= show.artist %></td>
+      <td><%= show.venue %></td>
+      <td><%= show.venue_lat %></td>
+      <td><%= show.venue_long %></td>
+      <td><%= show.price %></td>
+      <td><%= show.utc_date %></td>
+      <td><%= show.ytid %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: show_path(@conn, :show, show), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: show_path(@conn, :edit, show), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: show_path(@conn, :delete, show), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New show", to: show_path(@conn, :new) %>

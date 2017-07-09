@@ -1,0 +1,6 @@
+<div id="app"/>
+<%= if assigns[:env] == :prod do %>
+<script src="<%= static_path(@conn, "/js/sonar.js") %>" charset="UTF-8"></script>
+<% else %>
+<script src="http://localhost:8080/js/sonar.js" charset="UTF-8"></script>
+<% end %>

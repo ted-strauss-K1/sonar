@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "livetracks-1273",
+  "private_key_id": "2e1f941e44fea568bf64c9e8359381d7aed6726d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEwAIBADANBgkqhkiG9w0BAQEFAASCBKowggSmAgEAAoIBAQDP5XGeJ/6A+8Rt\nZB3aqIZXaVvnciH6NTYp/pxSXZ6aYuLzdHoTBqts/bdos3HnKB4LOOEYC32LrlfJ\nut+rf0uN6qX8aWyTFgZbJ+iYQXiaP4YbID5fYzHR970ylwKJhstae+BiihjbR/aV\n3al9AcK8JvBvXux2FD6TcimOAPDbzU9uUY6vYSpxI7mFeYGiIHKFxQqF1YI07Lxi\nwQxds3o6J4fQH59TNXB3d/Jn8GmF3RoFFU3xv3Kwxx5SBHSBweJjK5LdVUW+OuQF\nRqSgInVEzP4bHxZVmQX+0MyDhZ0h4HEmFri2wkb6s0q1RTZVOjd3FxkzlbpSRGKt\nqIVbenghAgMBAAECggEBAJdaEz1xIHgG0xpQqOtnhWZd7eqxzMq7spMgKe5M+gqr\ns05KnhT75hGTJNO00FfZfQXugvFebCgk5QSYZ/4Szo6jJfR9S+5JOpdilpNCFus1\nFAzrjH0lWj/ifHs4NUCqQaG+Tb1vjGkYGw1AMwQvI/aW4rQyBzRvyJ7PnjEjvjZG\nEjRP0UvTDR4Q/3kcutg2JGYw4FkOKBgYiahiDbEky80ya/yYEAuws1SZgjzCx3RX\nzZf0roQZ7OM39gqKZppkgqGLlPqela/2Sr0iY5uauZ/KdeXeAJdL3mQ/bDmGoXwj\nrdRz4hbCK3y4LD2p0U52aNEDzbwh4mP0+VIBBlhXP4ECgYEA8O3XPXqSYvvoR2TS\nUlxCh7V9ek0yvldcM+LtanXM1LBK2VYJz0J1dgFHRJwe8umSofEf8X116GaYNbk8\nfcYcKdTAoJc1V1eSj/Yd69l8EVJ6/ZAS+u8kRWk/Fy+LULEHsl3GcqC1nz31T2V+\nXfAu9e4XRLd8z64HZ1xAjorKQNMCgYEA3OagZ2DpFizJR9X8PT1c0cP5k/H9likb\nmSYjWmCBMLAo85cUiwXt06E3mI7Ww2gZWnYoJhCoZbvSDodEAjYB8CdSybher09q\nB+St9F2Ul3wrxOByD3BY/iMPIVz5+2KRcAQODK6qQskVq7LmL3yGaNBbhdkSvk/7\nPIZ9o5PrqrsCgYEA7RGrlNQSTRIA+pdLmT0tPeoo4Porbz34/RlTckkd1z7tN7RA\njM+hUw9o+CsDDRUmcvEX9ID2T0r8hQiTbFNPDR5KuPpww1PpZHzR7mwfd9AIM47c\nDkzYDPDF4uOmmyzHHQzHI63daScHRivhTz/yhY3VGYnPZ2+f22XcJCaPY38CgYEA\nwovCvQkWftcWtdN5gJ2oP32vMmKvCS5PBgQWoqPXY3/hsRZfm0ivefDEO/Ggpxvp\nKEhjd5K4HFDb4Lu0Y5YZAt4/BTUA/ricEzONGGfKU9eh3JQnH/28AqXxz1pJNuJK\nYDLSBM1XWdYq5bp7C1tKLMlDsY/J+B4Mj/OKdyPxK70CgYEAuB4otI9364DwrqH7\nBU446VNwxeJok7B6o1cmhSd7S4yJ7CqhzvxaQ8Mu2e/ofu2C4BmX+qplPdPW2fhd\n4MLgnTM3DiVx2iXvzoTn9sPlctgjzX7qYqwPFxx92H7USy+JKFBf8FD5lDYjpDsf\nSujMO/EPS3q4lOZephyYhNKKk7g=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bdd-474@livetracks-1273.iam.gserviceaccount.com",
+  "client_id": "115099020493373244163",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bdd-474%40livetracks-1273.iam.gserviceaccount.com"
+}

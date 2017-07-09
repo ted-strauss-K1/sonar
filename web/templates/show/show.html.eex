@@ -1,0 +1,43 @@
+<h2>Show show</h2>
+
+<ul>
+
+  <li>
+    <strong>Artist:</strong>
+    <%= @show.artist %>
+  </li>
+
+  <li>
+    <strong>Venue:</strong>
+    <%= @show.venue %>
+  </li>
+
+  <li>
+    <strong>Venue lat:</strong>
+    <%= @show.venue_lat %>
+  </li>
+
+  <li>
+    <strong>Venue long:</strong>
+    <%= @show.venue_long %>
+  </li>
+
+  <li>
+    <strong>Price:</strong>
+    <%= @show.price %>
+  </li>
+
+  <li>
+    <strong>Utc date:</strong>
+    <%= @show.utc_date %>
+  </li>
+
+  <li>
+    <strong>Ytid:</strong>
+    <%= @show.ytid %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: show_path(@conn, :edit, @show) %>
+<%= link "Back", to: show_path(@conn, :index) %>

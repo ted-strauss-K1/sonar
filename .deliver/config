@@ -1,0 +1,40 @@
+APP="sonar"
+RELEASE_DIR="/home/freebsd/build/_build/prod/rel/sonar"
+
+BUILD_HOST="104.236.112.181"
+BUILD_USER="freebsd"
+BUILD_AT="/home/freebsd/build"
+
+STAGING_HOSTS="104.236.112.181"
+STAGING_USER="freebsd"
+DELIVER_TO="/home/freebsd/apps"
+
+# For *Phoenix* projects, symlink prod.secret.exs to our tmp source
+pre_erlang_get_and_update_deps() {
+  local _prod_secret_path="/home/freebsd/data/prod.secret.exs"
+  if [ "$TARGET_MIX_ENV" = "prod" ]; then
+    __sync_remote "
+      ln -sfn '$_prod_secret_path' '$BUILD_AT/config/prod.secret.exs'
+    "
+  fi
+}
+
+pre_erlang_clean_compile() {
+  status "Fetching js dependencies"
+  __sync_remote " # runs the commands on the build host
+   cd '$BUILD_AT' # enter the build directory on the build host (required)
+   yarn
+  "
+  status "Building static assets"
+  __sync_remote " # runs the commands on the build host
+   cd '$BUILD_AT' # enter the build directory on the build host (required)
+   mkdir -p priv/static # required by the phoenix.digest task
+   yarn run prod
+  "
+  status "Running phoenix.digest" # log output prepended with "----->"
+  __sync_remote " # runs the commands on the build host
+    #set -e fail if any command fails (recommended)
+    cd '$BUILD_AT' # enter the build directory on the build host (required)
+    APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phoenix.digest $SILENCE
+  "
+}
