@@ -3,13 +3,10 @@ import json
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-KEYFILE_PATH = ""
-
 
 def pull(path):
     scope = ['https://spreadsheets.google.com/feeds']
-    keyfile = os.path.join(path.decode(
-        'utf-8'), KEYFILE_PATH)
+    keyfile = path.decode('utf-8')
     credentials = ServiceAccountCredentials.from_json_keyfile_name(
         keyfile, scope)
     gcu = gspread.authorize(credentials)

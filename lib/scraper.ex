@@ -18,7 +18,7 @@ defmodule Scraper do
     Repo.delete_all(Show)
 
     {:ok, pid} = Python.start(python_path: "priv")
-    Python.call(pid, "googlesheets", "pull", [Application.app_dir(:sonar, "priv")])
+    Python.call(pid, "googlesheets", "pull", [System.get_env("KEYFILE_PATH")])
     |> Poison.decode!
     |> Stream.reject(&(Map.get(&1, "VenueName") === ""))
     |> Stream.reject(&(Map.get(&1, "VenueLat") === ""))

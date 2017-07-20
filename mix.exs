@@ -48,8 +48,7 @@ defmodule Sonar.Mixfile do
      {:ueberauth_identity, "~> 0.2"},
      {:ueberauth_facebook, "~> 0.5"},
      {:cors_plug, "~> 1.1"},
-     {:edeliver, "~> 1.4"},
-     {:distillery, "~> 1.1", warn_missing: false}]
+     {:edeliver, "~> 1.4"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
